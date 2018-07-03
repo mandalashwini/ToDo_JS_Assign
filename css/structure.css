@@ -38,7 +38,7 @@ body{
 	top:50%;
 	margin:-300px 0 0 -166px;
 }
-.boxBody
+.boxBody-login
 {
     background:#fefefe;
     border-top:1px solid #dde0e8;
@@ -161,4 +161,33 @@ footer#main{
 	text-align:center;
 	font:normal 11px/16px Arial, Helvetica, sans-serif;
 	width:100%;
+}
+
+.box.registration
+{
+	height:80%;
+    width:400px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-300px 0 0 -166px;
+
+}
+
+.boxBody-registration
+{
+    background:#fefefe;
+    
+    border-top:1px solid #dde0e8;
+    /*border-bottom:1px solid #dde0e8;*/
+    padding:10px 20px;
+}
+.container{
+    width: 10%;
+    
+}
+.error_labels{
+    color: red;
+    font-style: italic;
+    font-size: 12px;
 }

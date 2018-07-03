@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>ToDo Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/ToDo_JS_Assign/js/signup_fun.js"></script>
+  <script src="/ToDo_JS_Assign/js/validations.js"></script>
+<link rel="stylesheet" type="text/css" href="/ToDo_JS_Assign/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/ToDo_JS_Assign/css/structure.css">
+
+</head>
+<nav class="navbar navbar-inverse">
+	<!--<p><span style="color: white; font-size: 20px">ToDo Login</span></p>-->
+	
+  </nav> 
+	<div class="container">
+			<form class="box registration" onsubmit="signup_fun()">
+				<fieldset class="boxBody-registration">
+				<p align="center"><span style="font-size: 15px">ToDo SignUp</span></p>
+				<label>First Name<span style="color: red; font-size: 10px"> *<p id="fname_error" class="error_labels"></p></span></label>
+				<input type="text"placeholder="First Name" id="fname">
+
+				<label>Last Name<span style="color: red">*<p id="lname_error" class="error_labels"></p></span></label>
+				<input type="text"placeholder="Last Name" id="lname">
+
+				<label>Email Id<span style="color: red">*<p id="email_error" class="error_labels"></p></span></label>
+				<input type="email"placeholder="" id="email">
+
+				<label>Gender<span style="color: red">*</span></label>
+				
+
+				<label>Password<span style="color: red">*<p id="pass_error" class="error_labels"></p></span></label>
+				<input type="password" id="password">			
+
+				<label>Confirm Password<span style="color: red">*<p id="cpass_error" class="error_labels"></p></span></label>
+				<input type="password" id="confirm_password">	<br>		
+			
+				<input type="button" class="btnLogin" value="Register"  onclick="signup_fun();">
+			</fieldset>
+			<br/>
+		</form>
+</div>
+</html>
