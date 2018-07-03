@@ -5,8 +5,39 @@ function signup_fun(){
     email=$("#email").val();
     password=$("#password").val();
     confirm_password=$("#confirm_password").val();
-    $('#fname_error').html("First name can't be blank");
-    
+    //Fname validate
+    var cnt = 0;
+    Fname(fname).then(function(){
+        c++;
+    }).catch(function(){
+        $('#fname_error').html("First name can't be blank");
+    })
+    //lname validate
+    Lname(lname).then(function(){
+        c++;
+    }).catch(function(){
+        $('#lname_error').html("second name can't be blank");
+    })
+
+    //Email
+    Email(email).then(function(){
+        c++;
+    }).catch(function(){
+        $('#email_error').html("email can't be blank");
+    })
+    //password
+    Pass(password).then(function(){
+        c++;
+    }).catch(function(){
+        $('#email_error').html("");
+    })
+
+    Cpass(confirm_password).then(function(){
+        c++;
+    }).catch(function(){
+        $('#email_error').html("email can't be blank");
+    })
+
 }
 
 var Fname=function(fname){
@@ -31,4 +62,34 @@ var Lname=function(fname){
    })
    }
 
+var Email=function(email){
+    return new Promise(function(resolve,reject){
+        if(validations.email_validate(email))
+            resolve()
+            else
+            reject()
+         
+    })
+}
+
+var Pass=function(password){
+    return new Promise(function(resolve,reject){
+        if(validations.password_validate(password))
+            resolve()
+            else
+            reject()
+         
+    })
+}
+
+
+var Cpass=function(confirm_password){
+    return new Promise(function(resolve,reject){
+        if(validations.confirm_password_validate(confirm_password))
+            resolve()
+            else
+            reject()
+         
+    })
+}
 
