@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/ToDo_JS_Assign/js/signup_fun.js"></script>
+  <script src="/ToDo_JS_Assign/js/signup.js"></script>
   <script src="/ToDo_JS_Assign/js/validations.js"></script>
 <link rel="stylesheet" type="text/css" href="/ToDo_JS_Assign/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/ToDo_JS_Assign/css/structure.css">
@@ -23,24 +24,24 @@
 				<fieldset class="boxBody-registration">
 				<p align="center"><span style="font-size: 15px">ToDo SignUp</span></p>
 				<label>First Name<span style="color: red; font-size: 10px"> *<p id="fname_error" class="error_labels"></p></span></label>
-				<input type="text"placeholder="First Name" id="fname" >
+				<input type="text"placeholder="First Name" id="fname" onchange="signup_module.fname_validate();">
 
 				<label>Last Name<span style="color: red">*<p id="lname_error" class="error_labels"></p></span></label>
-				<input type="text"placeholder="Last Name" id="lname">
+				<input type="text"placeholder="Last Name" id="lname" readonly onchange="signup_module.lname_validate();">
 
 				<label>Email Id<span style="color: red">*<p id="email_error" class="error_labels"></p></span></label>
-				<input type="email"placeholder="" id="email">
+				<input type="text" id="email" readonly onchange="signup_module.email_validate();">
 
 				<label>Gender<span style="color: red">*</span></label>
 				
 
 				<label>Password<span style="color: red">*<p id="pass_error" class="error_labels"></p></span></label>
-				<input type="password" id="password">			
+				<input type="password" id="password" readonly onchange="signup_module.password_validate();">			
 
 				<label>Confirm Password<span style="color: red">*<p id="cpass_error" class="error_labels"></p></span></label>
-				<input type="password" id="confirm_password">	<br>		
+				<input type="password" id="confirm_password" readonly onchange="signup_module.confirm_password_validate();">	<br>		
 			
-				<input type="button" class="btnLogin" value="Register"  onclick="signup_fun();">
+				<input type="button" class="btnLogin" value="Register"  onclick="signup_module.signup_fun();">
 			</fieldset>
 			<br/>
 		</form>
